@@ -3,9 +3,11 @@ module.exports = {
   content: ["*.{html,js}"],
   theme: {
     container: {
+
       padding: {
         DEFAULT: '15px'
-      }
+      },
+
     },
     screens: {
       sm: '640px',

@@ -37,11 +37,11 @@ h6 {
 }
 
 .btn-sm {
-    @apply h-14 px-10;
+    @apply h-10 px-5;
 }
 
 .btn-lg {
-    @apply h-16 px-[50px];
+    @apply h-14 px-[15px];
 }
 
 .btn-accent {
