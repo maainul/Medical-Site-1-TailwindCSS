@@ -9,6 +9,11 @@ module.exports = {
       },
 
     },
+    container_lg: {
+      padding: {
+        DEFAULT: '10px'
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
