@@ -1,346 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insove</title>
     <!-- CSS -->
     <link rel="stylesheet" href="dist/output.css" />
     <!-- icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--Swipper CSS  -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="py-8 lg:pt-6 lg:pb-14">
-        <div class="container mx-auto flex flex-col gap-y-4 lg:gap-y-0 lg:relative lg:flex-row lg:justify-between">
-            <!-- logo -->
-            <div class="flex justify-center lg:justify-normal">
-                <a href="#" class="hover:cursor-pointer">
-                    <img src="./assets/img/header/logo.svg" alt="" srcset="" />
-                </a>
-            </div>
-
-            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0 lg:items-center">
-                <!-- location -->
-                <div class="flex justify-center gap-x-2 lg:justify-normal">
-                    <i class="ri-map-pin-fill text-2xl text-accent"></i>
-                    <div class="text-secondary hover:text-accent-secondary hover:cursor-pointer">
-                        123 Gopalpur,Tangail,Dhaka
-                    </div>
-                </div>
-                <!-- phone -->
-                <div class="flex justify-center gap-x-2 lg:justify-normal">
-                    <i class="ri-phone-fill text-x-2xl text-accent"></i>
-                    <div class="text-secondary hover:text-accent-secondary hover:cursor-pointer">
-                        01742503080
-                    </div>
-                </div>
-                <!-- btn -->
-                <button class="btn btn-lg btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0">
-                    Book now
-                </button>
-                <!-- Mobile Nav -->
-                <nav
-                    class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20">
-                    <!-- Nav Trigger -->
-                    <div
-                        class="mnav__close-btn bg-primary w-8 h-8 relative -right-full top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all">
-                        <i class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"></i>
-                    </div>
-
-                    <!-- Logo,list,form -->
-                    <div class="px-12 flex flex-col gap-y-12 h-full">
-                        <!-- logo -->
-                        <a href="#">
-                            <img src="assets/img/header/logo.svg" alt="" srcset="" />
-                        </a>
-
-                        <!-- list -->
-                        <ul class="flex flex-col gap-y-5">
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Home</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Doctors</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Department</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Services</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-secondary hover:text-accent transition-all duration-300">Contact</a>
-                            </li>
-                        </ul>
-
-                        <!-- form -->
-                        <form action="#" class="relative flex gap-x-[15px]">
-                            <label for="mnav-search-input">
-                                <i class="ri-search-line text-2xl text-accent"></i>
-                                <input type="text" id="mnav-search-input" placeholder="Search..."
-                                    class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic" />
-                            </label>
-                        </form>
-                    </div>
-                </nav>
-                <!-- Desktop Nav -->
-                <nav
-                    class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]">
-                    <!-- list -->
-                    <ul class="flex gap-x-4">
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Home</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Doctors</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Department</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Services</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- form -->
-                    <form action="" class="relative flex gap-x-[10px]">
-                        <label for="search-input" class="flex justify-center items-center group">
-                            <i class="ri-search-line text-2xl text-accent mr-2"></i>
-                            <input type="text" id="search-input" placeholder="Search..."
-                                class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 focus:border-accent duration-150 transition-all placeholder:italic placeholder:text-base" />
-                        </label>
-                    </form>
-                </nav>
-            </div>
+      <div
+        class="container mx-auto flex flex-col gap-y-4 lg:gap-y-0 lg:relative lg:flex-row lg:justify-between"
+      >
+        <!-- logo -->
+        <div class="flex justify-center lg:justify-normal">
+          <a href="#" class="hover:cursor-pointer">
+            <img src="./assets/img/header/logo.svg" alt="" srcset="" />
+          </a>
         </div>
+
+        <div
+          class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0 lg:items-center"
+        >
+          <!-- location -->
+          <div class="flex justify-center gap-x-2 lg:justify-normal">
+            <i class="ri-map-pin-fill text-2xl text-accent"></i>
+            <div
+              class="text-secondary hover:text-accent-secondary hover:cursor-pointer"
+            >
+              123 Gopalpur,Tangail,Dhaka
+            </div>
+          </div>
+          <!-- phone -->
+          <div class="flex justify-center gap-x-2 lg:justify-normal">
+            <i class="ri-phone-fill text-x-2xl text-accent"></i>
+            <div
+              class="text-secondary hover:text-accent-secondary hover:cursor-pointer"
+            >
+              01742503080
+            </div>
+          </div>
+          <!-- btn -->
+          <button
+            class="btn btn-lg btn-outline w-[240px] lg:w-auto mx-auto lg:mx-0"
+          >
+            Book now
+          </button>
+          <!-- Mobile Nav -->
+          <nav
+            class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl lg:hidden transition-all duration-300 z-20"
+          >
+            <!-- Nav Trigger -->
+            <div
+              class="mnav__close-btn bg-primary w-8 h-8 relative -right-full top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all"
+            >
+              <i
+                class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"
+              ></i>
+            </div>
+
+            <!-- Logo,list,form -->
+            <div class="px-12 flex flex-col gap-y-12 h-full">
+              <!-- logo -->
+              <a href="#">
+                <img src="assets/img/header/logo.svg" alt="" srcset="" />
+              </a>
+
+              <!-- list -->
+              <ul class="flex flex-col gap-y-5">
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Doctors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Department</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent transition-all duration-300"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+
+              <!-- form -->
+              <form action="#" class="relative flex gap-x-[15px]">
+                <label for="mnav-search-input">
+                  <i class="ri-search-line text-2xl text-accent"></i>
+                  <input
+                    type="text"
+                    id="mnav-search-input"
+                    placeholder="Search..."
+                    class="outline-none w-[160px] border-b-2 focus:border-b-2 focus:border-accent placeholder:italic"
+                  />
+                </label>
+              </form>
+            </div>
+          </nav>
+          <!-- Desktop Nav -->
+          <nav
+            class="bg-white absolute w-full left-0 -bottom-[86px] shadow-custom1 h-16 rounded-[10px] hidden lg:flex lg:items-center lg:justify-between lg:px-[50px]"
+          >
+            <!-- list -->
+            <ul class="flex gap-x-4">
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Doctors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Department</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r pr-4 text-secondary hover:text-accent transition-all duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <!-- form -->
+            <form action="" class="relative flex gap-x-[10px]">
+              <label
+                for="search-input"
+                class="flex justify-center items-center group"
+              >
+                <i class="ri-search-line text-2xl text-accent mr-2"></i>
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search..."
+                  class="outline-none w-[100px] focus:w-[180px] focus:border-b-2 focus:border-accent duration-150 transition-all placeholder:italic placeholder:text-base"
+                />
+              </label>
+            </form>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <!-- Hero -->
 
     <section class="bg-grey">
-        <div class="container flex mx-auto py-12">
-            <!-- text and Content left for lg and center for sm -->
-            <div class="flex flex-col lg:ml-0 lg:py-12">
-                <div
-                    class="py-[10px] px-[20px] flex items-center bg-white w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
-                    <i class="ri-heart-pulse-line text-2xl text-accent"></i>
-                    <div class="uppercase text-base font-medium text-[#9ab4b7]">
-                        Live your life
-                    </div>
-                </div>
-                <h1 class="h1 text-center mb-6 lg:text-left lg:w-[640px] font-[1100]">
-                    We care about your health
-                </h1>
-                <p class="mb-[42px] md:max-w-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                    adipisci quas, modi eos provident dicta ut iste assumenda nisi, nam
-                    voluptas. Sequi cupiditate aliquam commodi nostrum vitae possimus
-                    quo in!
-                </p>
-                <button class="btn btn-lg btn-outline w-[240px] mx-auto lg:mx-0">
-                    Contact US
-                </button>
+      <div class="container flex mx-auto py-12">
+        <!-- text and Content left for lg and center for sm -->
+        <div class="flex flex-col lg:ml-0 lg:py-12">
+          <div
+            class="py-[10px] px-[20px] flex items-center bg-white w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0"
+          >
+            <i class="ri-heart-pulse-line text-2xl text-accent"></i>
+            <div class="uppercase text-base font-medium text-[#9ab4b7]">
+              Live your life
             </div>
-            <div class="hidden max-w-[814px] self-end xl:flex">
-                <img src="assets/img/hero/img.png" alt="" />
-            </div>
+          </div>
+          <h1 class="h1 text-center mb-6 lg:text-left lg:w-[640px] font-[1100]">
+            We care about your health
+          </h1>
+          <p class="mb-[42px] md:max-w-xl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            adipisci quas, modi eos provident dicta ut iste assumenda nisi, nam
+            voluptas. Sequi cupiditate aliquam commodi nostrum vitae possimus
+            quo in!
+          </p>
+          <button class="btn btn-lg btn-outline w-[240px] mx-auto lg:mx-0">
+            Contact US
+          </button>
         </div>
+        <div class="hidden max-w-[814px] self-end xl:flex">
+          <img src="assets/img/hero/img.png" alt="" />
+        </div>
+      </div>
     </section>
 
     <!-- Stats -->
     <section class="stats section">
-        <div class="container mx-auto">
-            <!-- wrapper -->
-            <div class="flex flex-col lg:flex-row gap-y-6 justify-between">
-                <!-- item -->
-                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
-                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent">
-                        +5120
-                    </div>
-                    <div>Happy Patients</div>
-                </div>
-                <!-- item -->
-                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
-                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent">
-                        +26
-                    </div>
-                    <div>Total Branches</div>
-                </div>
-                <!-- item -->
-                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
-                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent">
-                        +53
-                    </div>
-                    <div>Senior Doctors</div>
-                </div>
-                <!-- item -->
-                <div class="stats__item flex-1 xl:border-r flex flex-col items-center">
-                    <div class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent">
-                        +5120
-                    </div>
-                    <div>Years Experience</div>
-                </div>
+      <div class="container mx-auto">
+        <!-- wrapper -->
+        <div class="flex flex-col lg:flex-row gap-y-6 justify-between">
+          <!-- item -->
+          <div
+            class="stats__item flex-1 xl:border-r flex flex-col items-center"
+          >
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent"
+            >
+              +5120
             </div>
+            <div>Happy Patients</div>
+          </div>
+          <!-- item -->
+          <div
+            class="stats__item flex-1 xl:border-r flex flex-col items-center"
+          >
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent"
+            >
+              +26
+            </div>
+            <div>Total Branches</div>
+          </div>
+          <!-- item -->
+          <div
+            class="stats__item flex-1 xl:border-r flex flex-col items-center"
+          >
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent"
+            >
+              +53
+            </div>
+            <div>Senior Doctors</div>
+          </div>
+          <!-- item -->
+          <div
+            class="stats__item flex-1 xl:border-r flex flex-col items-center"
+          >
+            <div
+              class="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2 hover:text-accent"
+            >
+              +5120
+            </div>
+            <div>Years Experience</div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- end stats -->
 
     <!--  services -->
     <section class="services">
-        <!-- bg -->
-        <div
-            class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 lg:mx-auto rounded-[20px] lg:pt-[70px] px-6 lg:px-0 relative h-[368px] flex items-center lg:items-start -z-10">
-            <div class="container mx-auto ">
-                <div class="services__top flex item-center flex-col lg:flex-row lg:mb-[60px]">
-                    <h2 class="h2 text-white flex-1 mb-4 lg:mb-0 text-center lg:text-left">Our best services for your
-                        solution</h2>
-                    <p class="flex-1 text-white lg:text-left max-w-2xl lg:max-w-none">Lorem ipsum dolor sit amet
-                        consectetur
-                        adipisicing elit. Deserunt sint
-                        inventore
-                        incidunt
-                        ducimus? Nihil praesentium soluta porro sit dolores vitae, architecto nam et, iure aperiam,
-                        necessitatibus explicabo ea. Placeat, distinctio?</p>
-                </div>
-            </div>
+      <!-- bg -->
+      <div
+        class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 lg:mx-auto rounded-[20px] lg:pt-[70px] px-6 lg:px-0 relative h-[368px] flex items-center lg:items-start -z-10"
+      >
+        <div class="container mx-auto">
+          <div
+            class="services__top flex item-center flex-col lg:flex-row lg:mb-[60px]"
+          >
+            <h2
+              class="h2 text-white flex-1 mb-4 lg:mb-0 text-center lg:text-left"
+            >
+              Our best services for your solution
+            </h2>
+            <p class="flex-1 text-white lg:text-left max-w-2xl lg:max-w-none">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              sint inventore incidunt ducimus? Nihil praesentium soluta porro
+              sit dolores vitae, architecto nam et, iure aperiam, necessitatibus
+              explicabo ea. Placeat, distinctio?
+            </p>
+          </div>
         </div>
-        <!-- grid container -->
-        <div class="container mx-auto mt-8 lg:-mt-[144px]">
-            <div class="grid lg:grid-cols-4 gap-5 px-8 lg:px-0">
-                <!-- grid -->
-                <div
-                    class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300">
-                    <div class="mb-[15px]">
-                        <img src="assets/icons/services/icon-1.svg" alt="">
-                    </div>
-                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
-                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum, dolor sit amet consectetur
-                        adipisicing
-                        elit. .</p>
-                </div>
-                <!-- grid -->
-                <div
-                    class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300">
-                    <div class="mb-[15px]">
-                        <img src="assets/icons/services/icon-2.svg" alt="">
-                    </div>
-                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
-                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum, dolor sit amet consectetur
-                        adipisicing
-                        elit. Tenetur repellat aut dignissimos, natus
-                        assumenda expedita quis enim, </p>
-                </div>
-                <!-- grid -->
-                <div
-                    class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300">
-                    <div class="mb-[15px]">
-                        <img src="assets/icons/services/icon-3.svg" alt="">
-                    </div>
-                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
-                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum, dolor sit amet consectetur
-                        adipisicing
-                        elit. Tenetur repellat aut dignissimos, natus
-                        assumenda expedita quis enim, animi laboriosam velit, </p>
-                </div>
-                <!-- grid -->
-                <div
-                    class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300">
-                    <div class="mb-[15px]">
-                        <img src="assets/icons/services/icon-4.svg" alt="">
-                    </div>
-                    <h3 class="h3 mb-[10px]">General Practitioners</h3>
-                    <p class="font-light leading-normal max-w-[300px]">Lorem ipsum, dolor sit amet consectetur
-                        adipisicing
-                        elit. Tenetur repellat aut dignissimos, natus
-                        assumenda expedita quis enim</p>
-                </div>
+      </div>
+      <!-- grid container -->
+      <div class="container mx-auto mt-8 lg:-mt-[144px]">
+        <div class="grid lg:grid-cols-4 gap-5 px-8 lg:px-0">
+          <!-- grid -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300"
+          >
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/icon-1.svg" alt="" />
             </div>
+            <h3 class="h3 mb-[10px]">General Practitioners</h3>
+            <p class="font-light leading-normal max-w-[300px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. .
+            </p>
+          </div>
+          <!-- grid -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300"
+          >
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/icon-2.svg" alt="" />
+            </div>
+            <h3 class="h3 mb-[10px]">General Practitioners</h3>
+            <p class="font-light leading-normal max-w-[300px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+              repellat aut dignissimos, natus assumenda expedita quis enim,
+            </p>
+          </div>
+          <!-- grid -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300"
+          >
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/icon-3.svg" alt="" />
+            </div>
+            <h3 class="h3 mb-[10px]">General Practitioners</h3>
+            <p class="font-light leading-normal max-w-[300px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+              repellat aut dignissimos, natus assumenda expedita quis enim,
+              animi laboriosam velit,
+            </p>
+          </div>
+          <!-- grid -->
+          <div
+            class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] flex flex-col items-center text-center hover:translate-y-[-10px] hover:transition-all hover:duration-300"
+          >
+            <div class="mb-[15px]">
+              <img src="assets/icons/services/icon-4.svg" alt="" />
+            </div>
+            <h3 class="h3 mb-[10px]">General Practitioners</h3>
+            <p class="font-light leading-normal max-w-[300px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+              repellat aut dignissimos, natus assumenda expedita quis enim
+            </p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- end services-->
 
     <!-- appointment -->
     <section class="appointment section">
-        <div class="container mx-auto">
-            <h2 class="h2 mb-5 lg:mb-[50px] text-center lg:text-left">Book Appointment or call: <span
-                    class="text-accent">(+487) 384
-                    9452</span></h2>
-            <!-- form -->
-            <form action="" class="appontment__form flex flex-col gap-y-5 px-4 lg:px-0">
-                <!-- select wrapper -->
-                <div class="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
-                    <!-- select 1 -->
-                    <div class="select relative flex items-center">
-                        <!-- icon -->
-                        <div class="absolute right-4">
-                            <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
-                        </div>
-                        <!-- select -->
-                        <select class="appearance-none outline-none h-full w-full bg-transparent px-4">
-                            <option value="">Select departmet</option>
-                            <option value="1">Department 1</option>
-                            <option value="2">Department 2</option>
-                            <option value="3">Department 3</option>
-                            <option value="4">Department 4</option>
-                        </select>
-                    </div>
-                    <!-- select 1 end -->
+      <div class="container mx-auto">
+        <h2 class="h2 mb-5 lg:mb-[50px] text-center lg:text-left">
+          Book Appointment or call:
+          <span class="text-accent">(+487) 384 9452</span>
+        </h2>
+        <!-- form -->
+        <form
+          action=""
+          class="appontment__form flex flex-col gap-y-5 px-4 lg:px-0"
+        >
+          <!-- select wrapper -->
+          <div class="flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+            <!-- select 1 -->
+            <div class="select relative flex items-center">
+              <!-- icon -->
+              <div class="absolute right-4">
+                <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
+              </div>
+              <!-- select -->
+              <select
+                class="appearance-none outline-none h-full w-full bg-transparent px-4"
+              >
+                <option value="">Select departmet</option>
+                <option value="1">Department 1</option>
+                <option value="2">Department 2</option>
+                <option value="3">Department 3</option>
+                <option value="4">Department 4</option>
+              </select>
+            </div>
+            <!-- select 1 end -->
 
-                    <!-- select 2 -->
-                    <div class="select relative flex items-center">
-                        <!-- icon -->
-                        <div class="absolute right-4">
-                            <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
-                        </div>
-                        <!-- select -->
-                        <select class="appearance-none outline-none h-full w-full bg-transparent px-4">
-                            <option value="">Select Doctor</option>
-                            <option value="1">Doctor 1</option>
-                            <option value="2">Doctor 2</option>
-                            <option value="3">Doctor 3</option>
-                            <option value="4">Doctor 4</option>
-                        </select>
-                    </div>
-                    <!-- select 2 end -->
-                </div>
-                <!-- input -->
+            <!-- select 2 -->
+            <div class="select relative flex items-center">
+              <!-- icon -->
+              <div class="absolute right-4">
+                <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
+              </div>
+              <!-- select -->
+              <select
+                class="appearance-none outline-none h-full w-full bg-transparent px-4"
+              >
+                <option value="">Select Doctor</option>
+                <option value="1">Doctor 1</option>
+                <option value="2">Doctor 2</option>
+                <option value="3">Doctor 3</option>
+                <option value="4">Doctor 4</option>
+              </select>
+            </div>
+            <!-- select 2 end -->
+          </div>
+          <!-- input -->
 
-                <div class="flex flex-col lg:flex-row gap-5">
-                    <input type="text" class="input" placeholder="Full Name" />
-                    <input type="text" class="input" placeholder="Phone Number" />
-                </div>
-                <!--
+          <div class="flex flex-col lg:flex-row gap-5">
+            <input type="text" class="input" placeholder="Full Name" />
+            <input type="text" class="input" placeholder="Phone Number" />
+          </div>
+          <!--
                 <div class="flex flex-col lg:flex-row gap-5">
                     <input type="text" name="" id="" placeholder="Full Name" class="w-full border border-1 border-gray-300 rounded-lg px-4 font-light h-10 text-sm 
                         focus:outline-blue-400">
@@ -352,11 +452,126 @@
                         focus:outline-blue-400">
                 </div>
                   -->
-                <button class="btn btn-lg  btn-accent self-start">Book an appointment</button>
-            </form>
-        </div>
+          <button class="btn btn-lg btn-accent self-start">
+            Book an appointment
+          </button>
+        </form>
+      </div>
     </section>
     <!-- end appointment -->
+
+    <!-- testimonials -->
+    <section
+      class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12 lg:min-h-[595px] lg:py-0"
+    >
+      <div class="testimonial__container container mx-auto">
+        <div class="flex flex-col items-center gap-x-14 lg:flex-row">
+          <!-- img -->
+          <div class="hidden lg:flex">
+            <img src="assets/img/testimonials/img.png" alt="" srcset="" />
+          </div>
+          <!-- slider -->
+          <div class="max-w-[98%] lg:mx-w-[710px]">
+            <!-- Slider main container -->
+            <div class="swiper h-[400px]">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- slide 1 -->
+                <div class="swiper-slide pb-14">
+                  <div class="h-full flex flex-col justify-center items-start">
+                    <div class="max-w-[680px] mx-auto text-center lg:text-left">
+                      <p
+                        class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center lg:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7"
+                      >
+                        <!-- message -->
+                        <span
+                          >Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatem laudantium voluptatum dignissimos
+                          fugit consequuntur recusandae ullam alias cumque,
+                          pariatur iure veniam vitae, reprehenderit molestias
+                          error ab. Sequi accusantium nam iure?</span
+                        >
+                      </p>
+                      <!-- name -->
+                      <p class="text-[26px] text-[#4c5354] font-semibold0">
+                        James Rodrigo
+                      </p>
+                      <!-- job -->
+                      <div
+                        class="tet-[$9ab4b7] font-medium uppercase tracking-[2.24px]"
+                      >
+                        Customer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="swiper-slide pb-14">
+                  <div class="h-full flex flex-col justify-center items-start">
+                    <div class="max-w-[680px] mx-auto text-center lg:text-left">
+                      <p
+                        class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center lg:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7"
+                      >
+                        <!-- message -->
+                        <span
+                          >Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatem laudantium voluptatum dignissimos
+                          fugit consequuntur recusandae ullam alias cumque,
+                          pariatur iure veniam vitae, reprehenderit molestias
+                          error ab. Sequi accusantium nam iure?</span
+                        >
+                      </p>
+                      <!-- name -->
+                      <p class="text-[26px] text-[#4c5354] font-semibold0">
+                        James Rodrigo
+                      </p>
+                      <!-- job -->
+                      <div
+                        class="tet-[$9ab4b7] font-medium uppercase tracking-[2.24px]"
+                      >
+                        Customer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="swiper-slide pb-14">
+                  <div class="h-full flex flex-col justify-center items-start">
+                    <div class="max-w-[680px] mx-auto text-center lg:text-left">
+                      <p
+                        class="font-light relative text-[22px] text-[#4c5354] leading-[190%] text-center lg:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat mb-7"
+                      >
+                        <!-- message -->
+                        <span
+                          >Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatem laudantium voluptatum dignissimos
+                          fugit consequuntur recusandae ullam alias cumque,
+                          pariatur iure veniam vitae, reprehenderit molestias
+                          error ab. Sequi accusantium nam iure?</span
+                        >
+                      </p>
+                      <!-- name -->
+                      <p class="text-[26px] text-[#4c5354] font-semibold0">
+                        James Rodrigo
+                      </p>
+                      <!-- job -->
+                      <div
+                        class="tet-[$9ab4b7] font-medium uppercase tracking-[2.24px]"
+                      >
+                        Customer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- swiper pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end testimonials -->
 
     <!-- Script -->
     <!-- Scroll reveals -->
@@ -365,8 +580,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <!-- main -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
 
 <!-- https://www.youtube.com/watch?v=qmMIz0_c9Ek -->
